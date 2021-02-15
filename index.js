@@ -8,13 +8,10 @@ require('./models/User');
 require('./models/Survey');
 require('./services/passport');
 
-mongoose
-	.connect(keys.mongoURI, {
-		useUnifiedTopology: true,
-		useNewUrlParser: true
-	})
-	.then(() => console.log('MongoDB Connected...'))
-	.catch((err) => console.log(err));
+mongoose.connect(keys.mongoURI, {
+	useUnifiedTopology: true,
+	useNewUrlParser: true
+});
 
 const app = express();
 

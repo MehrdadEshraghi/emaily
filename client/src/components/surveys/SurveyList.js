@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
+import Container from '@material-ui/core/Container';
 
 class SurveyList extends Component {
 	componentDidMount() {
@@ -26,7 +27,11 @@ class SurveyList extends Component {
 	}
 
 	render() {
-		return <div>{this.renderSurveys()}</div>;
+		return (
+			<Container style={{ marginTop: '0', paddingTop: '5rem' }}>
+				<div>{this.renderSurveys()}</div>
+			</Container>
+		);
 	}
 }
 

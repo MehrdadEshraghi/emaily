@@ -30,12 +30,16 @@ class Header extends Component {
 	}
 	render() {
 		return (
-			<nav>
+			<nav style={{ position: 'absolute', zIndex: 30 }}>
 				<div className="nav-wrapper">
-					<Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">
+					<Link
+						style={{ marginLeft: '10px' }}
+						to={this.props.auth ? '/surveys' : '/'}
+						className="left brand-logo"
+					>
 						Emaily
 					</Link>
-					<ul id="nav-mobile" className="right hide-on-med-and-down">
+					<ul id="nav-mobile" className="right">
 						{this.renderContent()}
 					</ul>
 				</div>
