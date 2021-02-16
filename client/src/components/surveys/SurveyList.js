@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
 import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
 
 class SurveyList extends Component {
 	componentDidMount() {
@@ -18,8 +19,8 @@ class SurveyList extends Component {
 						<p className="right">Sent On: {new Date(survey.dateSent).toLocaleDateString()}</p>
 					</div>
 					<div className="card-action">
-						<a>Yes: {survey.yes}</a>
-						<a>No: {survey.no}</a>
+						<Button>Yes: {survey.yes}</Button>
+						<Button>No: {survey.no}</Button>
 					</div>
 				</div>
 			);

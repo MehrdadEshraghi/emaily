@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SurveyForm from './SurveyForm';
 import { reduxForm } from 'redux-form';
 import SurveyFormReview from './SurveyFormReview';
+import Container from '@material-ui/core/Container';
 
 class SurveyNew extends Component {
 	state = {
@@ -17,7 +18,11 @@ class SurveyNew extends Component {
 	}
 
 	render() {
-		return <div>{this.renderContent()}</div>;
+		return (
+			<Container style={{ paddingTop: '5rem' }}>
+				<div>{this.renderContent()}</div>
+			</Container>
+		);
 	}
 }
 
