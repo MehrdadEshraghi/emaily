@@ -45,7 +45,10 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: 'column',
 		color: 'white',
 		zIndex: 7,
-		marginLeft: '8rem'
+		marginLeft: '8rem',
+		[theme.breakpoints.down('sm')]: {
+			marginTop: '5rem'
+		}
 	},
 	button: {
 		'& a': {
@@ -59,7 +62,10 @@ const useStyles = makeStyles((theme) => ({
 		height: '100vh',
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
+		[theme.breakpoints.down('sm')]: {
+			flexDirection: 'column'
+		}
 	},
 	about: {
 		zIndex: 7,
